@@ -6,3 +6,7 @@ Para o próximo exercício, você não deve atribuir nenhuma classe ou id aos co
 3 - Estilize cada uma das tags h3.
 4 - Faça a terceira div ser maior que as demais.
 5 - Deixe as tags ímpares h3 com o texto em itálico. */
+
+div:hover {
+  border: black 2px dashed;
+}
