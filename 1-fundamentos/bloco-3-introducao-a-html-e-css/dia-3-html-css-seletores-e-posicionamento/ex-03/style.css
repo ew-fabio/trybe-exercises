@@ -21,8 +21,10 @@
  }
 
  li:active {
+  transition: 1s;
   font-family:'Courier New', Courier, monospace;
   font-size: 1.5em;
+  background-color: green;
  }
 
  ol, ul {
