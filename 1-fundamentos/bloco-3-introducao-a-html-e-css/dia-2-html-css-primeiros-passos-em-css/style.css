@@ -1,0 +1,38 @@
+    body {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 65px;
+      color: orange;
+      font-family: sans-serif;
+      text-decoration: overline;
+    }
+    
+    ul {
+      background-color: aqua;
+      line-height: 2.5em;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    
+    .background-p-ul {
+      background-color: aquamarine;
+    }
+    
+    p{
+      font-weight: 600;
+      font-size: 3em;
+      text-decoration: line-through;
+    }
+    
+    li.yellow {
+      background-color: yellow;
+    }
+    li.red {
+      background-color: red;
+    }
+    li.brown {
+      background-color: brown;
+    }
+  

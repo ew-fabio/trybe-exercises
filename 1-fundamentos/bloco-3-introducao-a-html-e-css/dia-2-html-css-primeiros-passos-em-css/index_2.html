@@ -1,0 +1,67 @@
+<!-- requisitos exercício 2-->
+<!-- 1 - Modifique o font-family do h1 para sans-serif
+     2 - Deixe o parágrafo com o font-weight 600
+     3 - Modifique o font-size do body para 16px
+     4 - Coloque o tamanho do parágrafo com o tamanho de 3 vezes o padrão do body
+     5 - Explore as propriedades font-style, line-height, text-align e text-decoration
+     6 - Troque a cor de fundo de cada item da lista para a cor correspondente ao texto -->
+
+     
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* requisito 3 */
+    body {
+      font-size: 16px;
+    }
+    /* requisito 1 e 5 */
+    h1 {
+      font-size: 65px;
+      color: orange;
+      font-family: sans-serif;
+      text-decoration: overline;
+    }
+    /* requisito 5 */
+    ul {
+      background-color: aqua;
+      line-height: 2.5em;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    
+    .background-p-ul {
+      background-color: aquamarine;
+    }
+    /* requisito 2 e 4 */
+    p{
+      font-weight: 600;
+      font-size: 3em;
+      text-decoration: line-through;
+    }
+    /* requisito 6 */
+    li.yellow {
+      background-color: yellow;
+    }
+    li.red {
+      background-color: red;
+    }
+    li.brown {
+      background-color: brown;
+    }
+  </style>
+  <title>Exercício - B3 - d2</title>
+</head>
+<body>
+  <h1>Exercícios 3.2</h1>
+    <p class="background-p-ul" >Qual é a sua cor favorita?</p>
+    <ul class="background-p-ul">
+      <li class="yellow">Amarelo</li>
+      <li class="red">Vermelho</li>
+      <li class="brown">Marrom</li>
+    </ul>
+</body>
+</html>
+
