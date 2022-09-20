@@ -39,3 +39,11 @@ li {
 em {
   font-weight: bold;
 }
+
+.prog-lang li:nth-of-type(-n+3) {
+  color: blue;  
+}
+
+.pink {
+  background-color: pink;
+}
