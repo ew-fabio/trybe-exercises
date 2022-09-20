@@ -23,3 +23,12 @@ ol li:nth-child(odd) {
   text-transform: uppercase;
 }
 
+.red-font {
+  color: red;
+}
+
+.transformed {
+  font-size: 40px;
+  border: 1px black solid;
+}
+
