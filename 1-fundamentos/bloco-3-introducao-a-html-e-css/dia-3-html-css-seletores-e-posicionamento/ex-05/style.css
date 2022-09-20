@@ -1,0 +1,108 @@
+/* 🚀 Para fixar
+E aí? Viu o quão incrível o CSS pode ser?! Agora, para fixar ainda mais o conteúdo, vamos exercitar. */
+
+/* Crie o arquivo style.css e resolva os seguintes exercícios:
+1 - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado ÍMPAR, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
+2 - Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta e sólida.
+3 - Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li, utilize a propriedade font-weight para deixá-lo negrito.
+4 - Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.
+5 - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"
+Dica 1: Utilize o seletor :hover para controlar o passar do mouse.
+Dica 2: Sugestão de cores padrão. StackOverflow (laranja), W3Schools (verde), MDN (preta), DevDocs (amarela), Trybe (verde). */
+
+
+ol li {
+  background-color: yellow;
+}
+
+ol li:nth-child(even) {
+  color: green;
+}
+
+ol li:nth-child(odd) {
+  text-transform: uppercase;
+}
+
+/* .red-font {
+  color: red;
+} */
+
+h1, h3 {
+  color: red;
+}
+
+/* .transformed {
+  font-size: 40px;
+  border: 1px black solid;
+} */
+
+h1 em {
+  font-size: 40px;
+  border: 1px black solid;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bold;
+}
+
+.prog-lang li:nth-of-type(-n+3) {
+  color: blue;  
+}
+
+.pink {
+  background-color: pink;
+}
+
+ul.aliados-dev li a:hover {
+  transition: 1s;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* a.stack:hover {
+  color: orange;
+} */
+
+ul.aliados-dev li a[href*="stackoverflow"]:hover {
+  color: orange;
+}
+
+/* a.w3s:hover {
+  color: green;
+} */
+
+ul.aliados-dev li a[href*="w3schools"]:hover {
+  color: green;
+}
+
+/* a.mdn:hover {
+  color: black;
+} */
+
+ul.aliados-dev li a[href*="mozilla"]:hover {
+  color: black;
+}
+
+/* a.devd:hover {
+  color: yellow;
+} */
+
+ul.aliados-dev li a[href*="devdocs"]:hover {
+  color: yellow;
+}
+
+/* a.trybe:hover {
+  color: darkgreen;
+} */
+
+ul.aliados-dev li a[href*="trybe"]:hover {
+  color: darkgreen;
+}
+
+body {
+  margin-bottom: 100px;
+}
