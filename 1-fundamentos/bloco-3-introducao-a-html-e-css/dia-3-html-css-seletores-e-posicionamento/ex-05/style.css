@@ -32,3 +32,10 @@ ol li:nth-child(odd) {
   border: 1px black solid;
 }
 
+li {
+  font-size: 20px;
+}
+
+em {
+  font-weight: bold;
+}
