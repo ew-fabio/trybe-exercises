@@ -47,3 +47,33 @@ em {
 .pink {
   background-color: pink;
 }
+
+a:hover {
+  transition: 1s;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+a.stack:hover {
+  color: orange;
+}
+
+a.w3s:hover {
+  color: green;
+}
+
+a.mdn:hover {
+  color: black;
+}
+
+a.devd:hover {
+  color: yellow;
+}
+
+a.trybe:hover {
+  color: darkgreen;
+}
+
+body {
+  margin-bottom: 100px;
+}
