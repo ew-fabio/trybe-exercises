@@ -23,11 +23,20 @@ ol li:nth-child(odd) {
   text-transform: uppercase;
 }
 
-.red-font {
+/* .red-font {
+  color: red;
+} */
+
+h1, h3 {
   color: red;
 }
 
-.transformed {
+/* .transformed {
+  font-size: 40px;
+  border: 1px black solid;
+} */
+
+h1 em {
   font-size: 40px;
   border: 1px black solid;
 }
@@ -36,7 +45,7 @@ li {
   font-size: 20px;
 }
 
-em {
+li em {
   font-weight: bold;
 }
 
@@ -48,29 +57,49 @@ em {
   background-color: pink;
 }
 
-a:hover {
+ul.aliados-dev li a:hover {
   transition: 1s;
   font-weight: bold;
   font-size: 30px;
 }
 
-a.stack:hover {
+/* a.stack:hover {
+  color: orange;
+} */
+
+ul.aliados-dev li a[href*="stackoverflow"]:hover {
   color: orange;
 }
 
-a.w3s:hover {
+/* a.w3s:hover {
+  color: green;
+} */
+
+ul.aliados-dev li a[href*="w3schools"]:hover {
   color: green;
 }
 
-a.mdn:hover {
+/* a.mdn:hover {
+  color: black;
+} */
+
+ul.aliados-dev li a[href*="mozilla"]:hover {
   color: black;
 }
 
-a.devd:hover {
+/* a.devd:hover {
+  color: yellow;
+} */
+
+ul.aliados-dev li a[href*="devdocs"]:hover {
   color: yellow;
 }
 
-a.trybe:hover {
+/* a.trybe:hover {
+  color: darkgreen;
+} */
+
+ul.aliados-dev li a[href*="trybe"]:hover {
   color: darkgreen;
 }
 
