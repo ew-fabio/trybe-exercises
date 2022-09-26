@@ -1,5 +1,6 @@
 //início do algoritmo
-let salarioBruto = Number(prompt("Digite seu salário bruto: ")); //entrada do usuário
+let salarioBruto = 3000;
+//let salarioBruto = Number(prompt("Digite seu salário bruto: ")); //entrada do usuário
 
 //salário mínimo em 2022
 let salarioMinimo = 1212.0;
@@ -52,4 +53,4 @@ let descontoIR = salarioBase * aliquotaIR - deducao; //variável de cálculo do 
 //salário líquido
 let salarioLiquido = salarioBase - descontoIR;
 
-alert("Salário líquido: " + salarioLiquido); //exibe o resultado para o usuário
+console.log();("Salário líquido: " + salarioLiquido); //exibe o resultado para o usuário
