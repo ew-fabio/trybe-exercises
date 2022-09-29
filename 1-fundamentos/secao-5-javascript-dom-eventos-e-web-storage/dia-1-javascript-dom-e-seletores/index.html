@@ -49,7 +49,7 @@
       - document.getElementsByTagName()*/
 
       //1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-      document.getElementsByTagName('p')[1].innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis perspiciatis nam beatae impedit soluta placeat et numquam libero adipisci omnis provident dolorem reprehenderit velit animi laborum inventore nemo totam.'
+      document.getElementsByTagName('p')[1].innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis perspiciatis nam beatae impedit soluta placeat et numquam libero adipisci omnis provident dolorem reprehenderit velit animi laborum inventore nemo totam.';
 
       //2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
       document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
@@ -62,8 +62,8 @@
       title.innerText = 'Exercício - Javascript';
 
       //5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
-
-
+      let upperP = document.getElementsByTagName('p')[0];
+      upperP.style.textTransform = 'uppercase';
 
       //6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 
