@@ -66,7 +66,10 @@
       upperP.style.textTransform = 'uppercase';
 
       //6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
-
+      let paragraphs = document.getElementsByTagName('p');
+        for (let i = 0; i < paragraphs.length; i = i + 1){
+          console.log(paragraphs[i]);
+        }
     </script>
   </body>
 </html>
