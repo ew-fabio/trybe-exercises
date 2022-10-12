@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeTrip</title>
+</head>
+<body>
+
+  <form action="" method="get">
+    <label for="input-text">
+      Nome: <input type="text" id="input-text" minlength="10" maxlength="40" required name="complete-name">
+    </label>
+    <br><br>
+
+    <label for="input-email">
+      Email: <input type="email" id="input-email" minlength="10" maxlength="50" required name="email-address">
+    </label>
+    <br><br><br>
+
+    <label for="">Destino Preferido:</label><br>
+    <label for="input-radio1">
+      <input type="radio" id="input-radio1" required name="user-option" value="city">Cidade
+    </label>
+    <label for="input-radio2">
+      <input type="radio" id="input-radio2" required name="user-option" value="farm">Campo
+    </label>
+    <label for="input-radio3">
+      <input type="radio" id="input-radio3" required name="user-option" value="beach">Praia
+    </label>
+    <label for="input-radio4">
+      <input type="radio" id="input-radio4" required name="user-option" value="mountain">Montanhas
+    </label>
+    <br><br>
+
+    <label for="input-answer">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label><br>
+    <textarea name="answer" id="input-answer" cols="30" rows="10" maxlength="500"></textarea>
+    <br><br>
+
+    <label for="input-date">Qual a melhor data para realizar sua viagem?</label><br>
+    <input type="date" name="date" id="input-date">
+    <br><br>
+
+    <label><input type="checkbox" name="agree-1" id="input-agree-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+    <br><br>
+
+    <label><input type="checkbox" name="agree-2" id="input-agree-2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+    <br><br>
+
+    <button type="submit" id="submit-button" disabled>Enviar</button>
+    <button type="button" id="clear-button">Apagar</button>
+
+  </form>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
