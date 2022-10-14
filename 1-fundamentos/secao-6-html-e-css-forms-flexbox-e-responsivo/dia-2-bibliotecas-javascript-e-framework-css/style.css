@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: darkslategray;
+}
+
+section {
+  background-color:darkgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#travel {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button.btn-warning {
+  color: darkgreen;
+}
