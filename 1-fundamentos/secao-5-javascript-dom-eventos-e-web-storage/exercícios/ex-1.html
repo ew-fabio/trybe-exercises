@@ -1,0 +1,55 @@
+<!-- Agora, você! Faça o seguinte:
+
+Recupere o elemento que contém o título da página e faça algo com ele, por exemplo alterá-lo para o nome do seu filme favorito.
+Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+Por fim, recupere o subtítulo e altere-o também. -->
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const title = document.getElementById('page-title');/* título */
+      title.innerText = 'O curso de Desenvolvimento WEB da Trybe é o melhor!';
+      title.style.marginTop = '50px';
+
+      const paragraph = document.getElementById("paragraph");/* parágrafo 1 */
+      paragraph.style.color = "red";
+      paragraph.innerText = 'Turma 27 - (08/22 - 07/23)';
+      paragraph.style.fontSize = '1.5em';
+
+      const subTitle = document.getElementById('subtitle');
+      subTitle.innerText = 'mascote?! rs';
+
+      const secondParagraph = document.getElementById('second-paragraph');/* parágrafo 2 */
+      const image = document.createElement('img');
+      secondParagraph.innerText = '';
+      secondParagraph.appendChild(image);
+      image.setAttribute('src', 'https://www.showmetech.com.br/wp-content/uploads//2021/02/capa-dog-1920x1024.jpg')
+      image.style.width = '350px';
+      image.style.boxShadow = '0 0 25px black';
+      image.style.borderRadius = '25px';
+
+      const corpo = document.querySelector('body');/* estilização do body */
+      corpo.style.display = 'flex';
+      corpo.style.justifyContent = 'center';
+      corpo.style.margin = 'auto';
+      corpo.style.backgroundColor = 'rgb(11, 138, 58)';
+      corpo.style.fontFamily = 'monospace';
+
+      const principal = document.querySelector('header');/* estilização do header */
+      principal.style.display = 'flex';
+      principal.style.flexDirection = 'column';
+      principal.style.width = '600px';
+      principal.style.alignItems = 'center';
+      principal.style.justifyContent = 'center';
+      console.log(secondParagraph.innerText.length);
+    </script>
+  </body>
+</html>

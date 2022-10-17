@@ -100,12 +100,12 @@
 			//6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 			function exibeLog() {
 				const paragraphs = document.getElementsByTagName("p");
-				for (let i = 0; i < paragraphs.length; i = i + 1) {
-					console.log(paragraphs[i]);
+				for (let i = 0; i < paragraphs.length; i += 1) {
+					console.log(paragraphs[i].innerText);
 				}
 			}
-
 			exibeLog();
+
 		</script>
 	</body>
 </html>
