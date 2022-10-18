@@ -1,111 +1,131 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Exercício</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
 
-		<style>
-			main,
-			section {
-				border-color: black;
-				border-style: solid;
-			}
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
 
-			.title {
-				text-align: center;
-			}
+      .title {
+        text-align: center;
+      }
 
-			.main-content {
-				background-color: yellow;
-			}
+      .main-content {
+        background-color: yellow;
+      }
 
-			.main-content .center-content {
-				background-color: red;
-				width: 50%;
-				margin: 0 auto;
-			}
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
 
-			.main-content .center-content p {
-				font-style: italic;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<h1 class="title">Exercício - JavaEscripito</h1>
-			<h2></h2>
-		</header>
-		<main class="main-content">
-			<section class="center-content">
-				<p>Texto padrão do nosso site</p>
-				<p>-----</p>
-				<p>Trybe</p>
-			</section>
-		</main>
-		<script>
-			/*
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Exercício - JavaEscripito </h1>
+      <h2 class="title"></h2>
+    </header>
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <h3 class="title"></h3>
+    <h4 class="title"></h4>
+    <h5 class="title"></h5>
+    <h6 class="title"></h6>
+    <script>
+        /*
       Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
       - document.getElementById()
       - document.getElementsByClassName()
-      - document.getElementsByTagName()*/
+      - document.getElementsByTagName()
+      1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)*/
+      const paragrafo2 = () => {
+        const p2 = document.getElementsByClassName('center-content');
+        for (let i = 0; i < p2[0].children.length; i += 1) {
+          if (p2[0].children[i].innerText === '-----') {
+            p2[0].children[i].innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+          }
+        }
+        //console.log(p2[0].children);
+      }
+      paragrafo2();
 
-			//1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-			function alteraTexto() {
-				const paragrafo = document.getElementsByTagName("p");
 
-				paragrafo[1].innerText =
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis perspiciatis nam beatae impedit soluta placeat et numquam libero adipisci omnis provident dolorem reprehenderit velit animi laborum inventore nemo totam.";
-			}
+      /*2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).*/
+      const quadradoVerde = () => {
+        const corAmarela = document.getElementsByTagName('main');
+        for (let i = 0; i < corAmarela.length; i += 1) {
+          if (corAmarela[i].style.backgroundColor !== 'rgb(76,164,109)') {
+            corAmarela[i].style.backgroundColor = 'rgb(76,164,109)';
+          }
+        }
+      }
+      quadradoVerde();
 
-			alteraTexto();
 
-			//2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-			function quadradoAmarelo() {
-				const quadrado = document.getElementsByClassName("main-content");
+      /*3. Crie e execute uma função que mude a cor do quadrado vermelho para branco.*/
+      const quadradoBranco = () => {
+        const quadrado = document.getElementsByClassName('center-content');
+        for (let i = 0; i < quadrado.length; i += 1) {
+          if (quadrado[i].nodeType === 1) {
+            quadrado[i].style.backgroundColor = '#FFFFFF';
+          }
+        }
+      }
+      quadradoBranco();
 
-				quadrado[0].style.backgroundColor = "rgb(76,164,109)";
-			}
 
-			quadradoAmarelo();
+      /*4. Crie e execute uma função que corrija o texto da tag <h1>.*/
+      const corrigeTitulo = () => {
+        for (let j = 0; j < 7; j += 1) {
+          const titulo = document.getElementsByTagName(`h${j}`);
+          for (let i = 0; i < titulo.length; i += 1) {
+            let verificacao = titulo[i].getAttribute('class')
+            if (verificacao === 'title') {
+              titulo[i].innerText = 'Exercício - DOM - Javascript';
+              titulo[i].style.fontFamily = 'monospace';
+              titulo[i].style.fontSize = '2em';
+              titulo[i].style.color = 'rgb(76,164,109)';
+            }
+          }
+        }
+      }
+      corrigeTitulo();
 
-			//3. Crie e execute uma função que mude a cor do quadrado vermelho para branco.
-			function quadradoVermelho() {
-				const quadradoCentro =
-					document.getElementsByClassName("center-content");
 
-				quadradoCentro[0].style.backgroundColor = "white";
-			}
+      /*5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.*/
+      const alteraParagrafo = () => {
+        const paragrafo = document.getElementsByClassName('center-content')[0].firstElementChild;
+        paragrafo.style.textTransform = 'uppercase';
+        paragrafo.style.textAlign = 'center';
+        paragrafo.style.fontFamily = 'monospace';
+        //console.log(paragrafo);
+      }
+      alteraParagrafo();
 
-			quadradoVermelho();
+      /*6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.*/
+      const exibeLog = () => {
+        const paragrafos = document.getElementsByTagName('p');
+        for (let i = 0; i < paragrafos.length; i += 1) {
+          console.log(paragrafos[i].innerText);
+        }
+      }
+      exibeLog();
 
-			//4. Crie e execute uma função que corrija o texto da tag <h1>.
-			function corrigeTitulo() {
-				const title = document.getElementsByTagName("h1");
-
-				title[0].innerText = "Exercício - Javascript";
-			}
-
-			corrigeTitulo();
-
-			//5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
-			function paragrafoMaiusculo() {
-				const upperP = document.getElementsByTagName("p");
-
-				upperP[0].style.textTransform = "uppercase";
-			}
-
-			paragrafoMaiusculo();
-
-			//6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
-			function exibeLog() {
-				const paragraphs = document.getElementsByTagName("p");
-				for (let i = 0; i < paragraphs.length; i += 1) {
-					console.log(paragraphs[i].innerText);
-				}
-			}
-			exibeLog();
-
-		</script>
-	</body>
+    </script>
+  </body>
 </html>
