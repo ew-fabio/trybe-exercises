@@ -14,8 +14,6 @@ const techList = (lista, nome) => {
       listaObjetos.push({tech: lista[i], name: nome});
     }
   return listaObjetos;
-
-
 };
 
 //console.log(techList(lista, 'Lucas'));
