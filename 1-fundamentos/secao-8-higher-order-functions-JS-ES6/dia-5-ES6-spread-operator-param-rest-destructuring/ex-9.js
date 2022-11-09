@@ -16,3 +16,8 @@ console.log(monthsOfYear(yearSeasons));
 
 
 
+const a = {};
+
+a[1] = 'segunda-feira';
+
+console.log(a);
