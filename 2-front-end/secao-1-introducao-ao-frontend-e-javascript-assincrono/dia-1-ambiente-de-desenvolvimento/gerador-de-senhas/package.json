@@ -1,0 +1,23 @@
+{
+  "name": "gerador-de-senhas",
+  "version": "1.0.0",
+  "description": "Nesse você pode confiar!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open",
+    "lint": "eslint ./src"
+  },
+  "keywords": [],
+  "author": "Fabio Sampaio",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "nanoid": "^4.0.0",
+    "vite": "^3.2.3"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
+}
