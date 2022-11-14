@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Campos</title>
+</head>
+<body>
+  <div class="container">
+
+    <h1 id="title">Validador de Campos</h1>
+
+    <form>
+      <input type="text" id="text" placeholder="texto">
+
+      <select name="campo" id="validators">
+        <option value=""></option>
+        <option value="lowerCase">texto em minúsculas</option>
+        <option value="strongPassword">senha forte</option>
+        <option value="onlyNumbers">somente número</option>
+        <option value="onlyAlphaNum">somente letras e números</option>
+        <option value="mobilePhone">telefone celular</option>
+      </select>
+
+      <button id="btn-confirm">OK</button>
+    </form>
+
+    <p class="result">Resultado...</p>
+
+  </div>
+
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>
