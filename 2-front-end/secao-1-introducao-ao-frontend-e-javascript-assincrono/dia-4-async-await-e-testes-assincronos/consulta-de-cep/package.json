@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "",
     "dev": "vite --open",
     "lint": "eslint ./src"
   },
@@ -17,6 +17,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "eslint": "^8.28.0"
+    "eslint": "^8.28.0",
+    "jest": "^29.3.1"
   }
 }
