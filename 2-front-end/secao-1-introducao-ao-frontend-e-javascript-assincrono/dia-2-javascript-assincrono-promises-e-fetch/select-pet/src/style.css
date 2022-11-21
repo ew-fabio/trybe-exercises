@@ -1,0 +1,35 @@
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#img-pet {
+  max-width: 50%;
+  margin-top: 30px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 12px #333;
+  padding: 10px;
+}
+
+#btn-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  border-style: none;
+  padding: 10px;
+  width: 30%;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+
+button:hover {
+  background-color: darkslategray;
+  transition: 1s;
+}
