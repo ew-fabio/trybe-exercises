@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Select from './Select';
+import TextArea from './TextArea';
 
 export default class Form extends Component {
   constructor() {
@@ -9,110 +11,89 @@ export default class Form extends Component {
       escola: '',
       fullName: '',
       email: '',
-      textArea: ''
+      textArea: '',
+      errorForm: true
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.fileInput = React.createRef();
   }
 
+  handleError() {
+    const { tecnologiaFavorita, escola, fullName, email, textArea } = this.state
+
+    const errorCases = [
+      !tecnologiaFavorita,
+      !escola,
+      !fullName.length,
+      !email.match(/^\S+@\S+$/i),
+      !textArea.length
+    ]
+
+    const formularioPreenchido = errorCases.every((error) => error !== true)
+
+    this.setState({
+      errorForm: !formularioPreenchido
+    })
+  }
+
+
   handleChange ({target: { name, value }}) {
     console.log(value);
     this.setState(({
       [name]: value,
-    }))
+    }), this.handleError)
   }
 
   render() {
-    const { tecnologiaFavorita } = this.state
+    const { tecnologiaFavorita, textArea, errorForm } = this.state
     return (
-      <form>
+      <>
+        <form>
 
-        <h1>Exercício de Formulários - REACT</h1>
-        <fieldset>
-          <legend>Dados do usuário:</legend>
-          <div>
-            <label htmlFor="fullName">Nome Completo:</label>
-            <input type="text" name="fullName" onChange={ this.handleChange } />
-          </div>
-
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input type="email" name="email" onChange={ this.handleChange } />
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Tecnologia favorita:</legend>
-          <div>
-            <label
-              htmlFor="tecnologiaFavorita">
-                Qual a sua tecnologia favorita?
-            </label>
-            <select
-              name="tecnologiaFavorita"
-              value={tecnologiaFavorita}
-              onChange={this.handleChange}>
-                <option value="none">
-                  Selecione...
-                </option>
-
-                <option value="javascript">
-                  Javascript
-                </option>
-
-                <option value="react">
-                  React
-                </option>
-
-                <option value="python">
-                  Python
-                </option>
-
-                <option value="java">
-                  Java
-                </option>
-
-                <option value="html-css">
-                  HTML/CSS
-                </option>
-            </select>
-          </div>
-
-          <div>
-            <label
-              htmlFor="textArea">
-                Poderia nos contar o motivo da sua escolha?
-              </label>
+          <h1>Exercício de Formulários - REACT</h1>
+          <fieldset>
+            <legend>Dados do usuário:</legend>
             <div>
-              <textarea
-                name="textArea"
-                cols="30"
-                rows="10"
-                onChange={ this.handleChange }
-              >
-              </textarea>
+              <label htmlFor="fullName">Nome Completo:</label>
+              <input type="text" name="fullName" onChange={ this.handleChange } />
             </div>
-          </div>
-        </fieldset>
 
-        <fieldset>
-          <legend>Escola:</legend>
-          <div>
-            <label htmlFor="escola">É tryber?
-              <input type="radio" name="escola" id="escola" value={true} onChange={ this.handleChange } /> Sim
-              <input type="radio" name="escola" id="escola" value={false} onChange={ this.handleChange } /> Não
-            </label>
-          </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input type="email" name="email" onChange={ this.handleChange } />
+            </div>
+          </fieldset>
 
-          <label>
-          Carregue seu portfolio:
-          <input type="file" ref={this.fileInput} />
-        </label>
-        </fieldset>
+          <fieldset>
+            <legend>Tecnologia favorita:</legend>
+            <Select handleChange={this.handleChange} value={tecnologiaFavorita} />
 
-      { JSON.stringify(this.state) } {/* serve para verificar a atualização do state */}
-      </form>
+            <TextArea handleChange={this.handleChange} value={textArea} />
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Escola:</legend>
+            <div>
+              <label htmlFor="escola">É tryber?
+                <input type="radio" name="escola" id="escola" value={true} onChange={ this.handleChange } /> Sim
+                <input type="radio" name="escola" id="escola" value={false} onChange={ this.handleChange } /> Não
+              </label>
+            </div>
+
+            <label>
+            Carregue seu portfolio:
+            <input type="file" ref={this.fileInput} />
+          </label>
+          </fieldset>
+
+        { JSON.stringify(this.state) } {/* serve para verificar a atualização do state */}
+        </form>
+        { errorForm
+          ? <span style={ { color: 'red' } }>Preencha todos os campos</span>
+          : <span style={ { color: 'green' } }>Todos campos foram preenchidos</span> }
+      </>
     )
   }
 }
