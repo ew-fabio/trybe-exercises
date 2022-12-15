@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  margin: 0 20px;
+  margin-top: 50px;
+  border: 2px solid;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 1px;
+  text-align: center;
+}
+
+input:focus {
+  background-color: rgb(50, 180, 200);
+  color: #ffff;
+}
+
+span {
+  color: rgb(76, 164, 109);
+  font-style: italic;
+}
+
+span.empty {
+  color: red;
+  font-style: normal;
+}
+
+span.almost {
+  color: orange;
+  font-style: normal;
+}
+
+span.full {
+  color: green;
+  font-style: italic;
+}
