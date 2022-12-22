@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-section {
+  text-align: center;
+  margin: 30px;
+}
+
+.list-cards {
+  margin: 80px;
+}
+
+.register-form {
+  background-color: rgb(199, 218, 203);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px black;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-height: max-content;
+  width: 60%;
+  margin: auto;
+}
+
+div.rccs {
+  margin: 30px;
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 1vmin);
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 250px;
+}
+
+label {
+  display: flex;
+  flex-flow: column nowrap;
+  width: auto;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+label input {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: teal;
+  color: #ffff;
+  transition: .5s;
+}
+
+li {
+  list-style: none;
+}
+
+.rendered-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+}
