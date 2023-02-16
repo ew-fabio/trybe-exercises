@@ -16,7 +16,8 @@ export default class App extends React.Component {
     this.setState({
       juiceFilter: value.toLowerCase()
     });
-    this.setState((prevState) => ({ theme: (prevState.theme === 'dark' ? 'light' : 'dark') }))
+    this.setState((prevState) => ({
+      theme: (prevState.theme === 'dark' ? 'light' : 'dark') }))
   }
 
   render() {
