@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ValidEmail from "./ValidEmail";
 
 class App extends React.Component {
 	state = {
@@ -45,7 +46,7 @@ class App extends React.Component {
 
 				<input type="button" id="btn-back" value="Voltar" />
 
-				<h2 data-testid="user-email">{`Email: ${saveEmail}`}</h2>
+				<ValidEmail email={ saveEmail } />
 			</div>
 		);
 	}
