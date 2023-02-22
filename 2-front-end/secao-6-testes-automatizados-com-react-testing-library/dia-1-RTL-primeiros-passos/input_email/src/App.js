@@ -4,22 +4,22 @@ import ValidEmail from "./ValidEmail";
 
 class App extends React.Component {
 	state = {
-		email: '',
-		saveEmail: '',
+		email: "",
+		saveEmail: "",
 	};
 
 	changeEmail = ({ target: { value } }) => {
 		this.setState({
 			email: value,
 		});
-	}
+	};
 
 	changeSaveEmail = (param) => {
 		this.setState({
 			saveEmail: param,
-			email: '',
+			email: "",
 		});
-	}
+	};
 
 	render() {
 		const { email, saveEmail } = this.state;
@@ -31,8 +31,8 @@ class App extends React.Component {
 					<input
 						type="email"
 						id="id-email"
-            value={ email }
-						onChange={ this.changeEmail }
+						value={email}
+						onChange={this.changeEmail}
 					/>
 				</label>
 
@@ -46,7 +46,7 @@ class App extends React.Component {
 
 				<input type="button" id="btn-back" value="Voltar" />
 
-				<ValidEmail email={ saveEmail } />
+				{saveEmail && <ValidEmail email={saveEmail} />}
 			</div>
 		);
 	}

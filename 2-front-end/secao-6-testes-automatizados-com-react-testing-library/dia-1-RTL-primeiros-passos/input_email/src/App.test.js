@@ -50,10 +50,10 @@ describe("Testa a aplicação de INPUT de email.", () => {
 
     const inputEmail = screen.getByLabelText('Email');
     const button = screen.getByTestId('btn-send');
-    const userEmail = screen.getByTestId('user-email');
 
     userEvent.type(inputEmail, USER);
     userEvent.click(button);
+    const userEmail = screen.getByTestId('user-email');
 
     expect(inputEmail).toHaveValue('');
     expect(userEmail).toHaveTextContent(`Email: ${USER}`);
