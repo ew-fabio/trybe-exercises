@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <button
-          onClick={ () => { dispatch(fetchDogImage()) } }
+          onClick={ () => dispatch(fetchDogImage()) }
           type='button'
         >
           New Dog
