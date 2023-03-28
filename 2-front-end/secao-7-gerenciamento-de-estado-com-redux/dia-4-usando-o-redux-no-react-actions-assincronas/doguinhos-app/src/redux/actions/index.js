@@ -23,7 +23,7 @@ function requestFailed(error) {
 export function fetchDogImage() {
   return (dispatch) => {
     dispatch(requestStarted());
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('https://dog.ceo/a/breeds/image/random')
       .then(response => response.json())
       .then(data => dispatch(requestSuccessful(data.message)))
       .catch((error) => dispatch(requestFailed(error)));
