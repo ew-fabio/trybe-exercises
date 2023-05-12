@@ -1,0 +1,15 @@
+{
+  "name": "imc",
+  "version": "1.0.0",
+  "description": "exercício trybe",
+  "main": "bmi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bmi": "node bmi"
+  },
+  "author": "Fabio Sampaio",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "1.4.10"
+  }
+}
