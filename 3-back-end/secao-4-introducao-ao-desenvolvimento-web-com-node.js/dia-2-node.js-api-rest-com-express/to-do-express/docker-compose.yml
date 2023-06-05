@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  todoapp:
+    image: node:16
+    container_name: todo
+    working_dir: /usr/app
+    volumes:
+      - ./:/usr/app
+    tty: true # docker run -t
+    stdin_open: true # docker run -i
+    ports:
+      - 3000:3000
