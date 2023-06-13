@@ -17,4 +17,4 @@ function fibonacci(params) {
   return fibonacciSequence;
 };
 
-console.log(fibonacci(10));
+module.exports = fibonacci;
